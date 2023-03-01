@@ -17,7 +17,7 @@ const Home = () => {
   
   const [keyword, setKeyword] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-
+ 
   useEffect(() => {
     dispatch(productsFetch({ keyword, currentPage }));
   }, [dispatch, keyword, currentPage]);
@@ -79,7 +79,7 @@ const Home = () => {
           <Pagination
             activePage={currentPage}
             itemsCountPerPage={resultPerPage}
-            totalItemsCount={productsCount}
+           
             onChange={setCurrentPageNo}
             nextPageText="Next"
             prevPageText="Prev"

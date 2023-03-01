@@ -33,7 +33,7 @@ export const productsFetchAdmin = createAsyncThunk(
   'products/productsFetchAdmin',
   async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/products/admin`);
+      const response = await axios.get(`${url}/admin`);
       return response.data;
     } catch (error) {
       console.log(error);
